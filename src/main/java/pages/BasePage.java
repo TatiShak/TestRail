@@ -1,6 +1,6 @@
 package pages;
 
-import utils.CommonUtils;
+//import utils.CommonUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -13,14 +13,14 @@ import java.time.Duration;
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    protected CommonUtils commonUtils;
+   // protected CommonUtils commonUtils;
     protected static Logger log = LoggerFactory.getLogger(BasePage.class);
     protected Actions actions;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        this.commonUtils = new CommonUtils();
+        //this.commonUtils = new CommonUtils();
         this.actions = new Actions(this.driver);
         PageFactory.initElements(driver, this);
     }
