@@ -36,6 +36,16 @@ public class Driver {
                 chromeOptionsMap.put("download.default_directory", downloadDirectory.getAbsolutePath());
                 options.setExperimentalOption("prefs", chromeOptionsMap);
                 options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--test-type");
+                options.addArguments("--start-maximized");
+                options.addArguments("--disable-extensions");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-default-apps");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--disable-infobars");
+
+                options.addArguments("--disable-popup-blocking");
+                options.addArguments("--disable-dev-shm-usage");
                 driver = new ChromeDriver(options);
                 break;
             case "firefox":
